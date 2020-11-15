@@ -4,6 +4,6 @@ O objetivo desse repositório é servir como um local de documentação ao longo
 
 Conteúdos:
 
-1. [Seletores][./1_SELECTORS/seletores.md]
+1. [Seletores](./1_SELECTORS/seletores.md)
 2. [Especificidade, Herança e Efeito Cascata](./2_SPECIFICITY/especificidade.md)
 3. [Unidades de Medida](./3_UNITS/units.md)
