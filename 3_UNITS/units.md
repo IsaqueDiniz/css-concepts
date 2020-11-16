@@ -118,13 +118,52 @@ Também é possível utilizar a função `rgb()` que recebe os valores do valor 
 
 #### Valores com transparência
 
-Uma variação chamada *RGBa* permite usar transparência nas cores através do canal *alpha*
+Uma variação chamada *RGBa* permite usar transparência nas cores através do canal *alpha* que definirá o nível de opacidade de uma cor:
+
+```css
+div {
+	background-color: rgba(2, 121, 139, 0.3);
+}
+```
 
 ## Imagens
 
+Há um tipo de valor chamado `<image>` que é usado na inserção imagens em determinados contextos através da função `url()`:
+
+```css
+.image {
+  background-image: url(star.png);
+}
+```
+
 ## Posição
 
+Existe o `<position>` que é usado para definir a posição de itens através dos valores de propriedades (que aceitam `<position>`) como `top`, `bottom`, `right` e `left`. Geralmente os valores de posição são definidos por uma orientação horizontal e vertical, ou seja, em coordenadas 2D.
+
+```css
+.box {
+  background-image: url(background.png);
+  background-repeat: no-repeat;
+  background-position: right 40px;
+}
+```
+
+Neste exemplo, nós definimos uma imagem de plano de fundo, sem repetição, e a posicionamos no eixo horizontal à direita e no eixo vertical com `40px` de distância do topo.
+
 ## Strings e identificadores
+
+Quando se faz uso de tipos `<color>`, por exemplo, usamos palavras-chaves para definir uma cor. Essas, são chamadas de identificadores, e não são `strings`. Haverá momento que se fará necessário o uso de tipos `strings` e outros o uso de identificadores. Considera o exemplo abaixo:
+
+```css
+.box {
+	color: white; /* identificacador */
+    background-color: darkred; /*identificador*/
+}
+
+.box::after {
+	content: "Some content here" /*Valor do tipo string*/
+}
+```
 
 ## Funções
 
