@@ -1,12 +1,13 @@
-# Unidades de medida
+# Tipos de valores
 
 ## Conceito
 
-Toda propriedade nas CSS possui um valor que definine seu funcionamento. Tal valor, é caracterizado por uma unidade de medida, que estão ligadas à propriedades específicas, não sendo possível atribui-las para outras propriedades. Por exemplo, a propriedade `background-color` não aceita o valor `10px`, pois este não define uma cor e sim um comprimento.
+Toda propriedade no CSS possui um valor que definine seu funcionamento. Tal valor, é caracterizado por um tipo de valor, que estão ligadas à propriedades específicas, não sendo possível atribui-las para outras propriedades. Por exemplo, a propriedade `background-color` não aceita o valor `10px`, pois este não define uma cor e sim um comprimento.
+
 ## Tipos de dados
 Dentro das especificações, os tipos de dados da CSS são definidos entre colchetes, e.g. `<color>`.
 
-Tipo de dados | Descrição
+Tipo de valor | Descrição
 --------------|-----------
 `<integer>` | número inteiro, como 512 ou 15.
 `<number>`	| representa um número decimal. Por exemplo,  0.30  -1.2.
@@ -69,7 +70,7 @@ Porcentagens são os valores de unidade relativada mais utilizado, simples e fle
 }
 .child	{
 	width: 50%;	/*=200px*/
-    padding: 50%; /*100px*/
+	padding: 50%; /*100px*/
 }
 ```
 
@@ -157,7 +158,7 @@ Quando se faz uso de tipos `<color>`, por exemplo, usamos palavras-chaves para d
 ```css
 .box {
 	color: white; /* identificacador */
-    background-color: darkred; /*identificador*/
+	background-color: darkred; /*identificador*/
 }
 
 .box::after {
@@ -173,7 +174,7 @@ No CSS existem várias funções para uso, entre eleas está a `calc()` que real
 
 ```css
 .box {
-  width: calc(20% + 100px);
+	width: calc(20% + 100px);
 }
 ```
 

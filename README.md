@@ -6,4 +6,4 @@ Conteúdos:
 
 1. [Seletores](./1_SELECTORS/seletores.md)
 2. [Especificidade, Herança e Efeito Cascata](./2_SPECIFICITY/especificidade.md)
-3. [Unidades de Medida](./3_UNITS/units.md)
+3. [Tipos de Valor](./3_VALUES/values.md)
