@@ -30,7 +30,7 @@ Unidade	| Nome	| Equivalente a
 `pt`	|Pontos |	1pt = 1/72 de 1 pol.
 `px`	|Píxeis	|1px = 1/96 de 1 pol.
 
-##### O pixel das CSS o pixel do dispositivo
+#### O pixel das CSS o pixel do dispositivo
 
 Existe um diferença entre a **resolução da CSS** a **resolução dos dispositivos**. Enquando a primeira serve para cálculos internos da CSS a segunda representa o atual número de pixels na tela. Lembrando que, resolução é quantidadade de pixels que há em uma linha e uma coluna. Dessa forma, se considerarmos a tela de um celular e a tela de um monitor, chegamos a conclusão que eles terão resoluções diferentes, ou seja, quantidade de pixels diferentes, pois suas dimensões físicas são diferentes. Esse raciocínio poderia fazer sentido caso não existe celulares e monitores com resoluções iguais mesmo que seus tamanhos sejam diferentes. É perfeitamente razoável encontrar celulares com a mesma resolução de um monitor, e esse comportamento denota que para diferentes tipos de telas haverá diferentes quantidades de pixels dispostas em quantidade de espaço iguais entre sí.
 
@@ -167,3 +167,19 @@ Quando se faz uso de tipos `<color>`, por exemplo, usamos palavras-chaves para d
 
 ## Funções
 
+Por definição, as funções realizam tarefas de forma simplificada, e sendo mais técnico, elas retornam valores sem esforço para o programador e o computador.
+
+No CSS existem várias funções para uso, entre eleas está a `calc()` que realizada um cálculo, por exemplo entre medidas de comprimento.
+
+```css
+.box {
+  width: calc(20% + 100px);
+}
+```
+
+Neste exemplo estamos usando a função `calc()` para definir o `width` de um elemento com `20%` do elemento ancestral maisa `100px`.
+
+
+## Saiba mais
+
+Este documento foi escrito com base no seguinte artigo *[CSS values and units](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units).*
