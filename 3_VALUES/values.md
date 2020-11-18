@@ -1,24 +1,33 @@
 # Tipos de valores
 
+1. [Conceito](#conceito)
+2. [Tipos de dados](#tipos-de-dados)
+3. [Cores](#cores)
+4. [Imagens](#imagens)
+5. [Posição](#posição)
+6. [Strings e identificadores](#strings-e-identificadores)
+7. [Funções](#funções)
+8. [Saiba mais](#saiba-mais)
+
 ## Conceito
 
-Toda propriedade no CSS possui um valor que definine seu funcionamento. Tal valor, é caracterizado por um tipo de valor, que estão ligadas à propriedades específicas, não sendo possível atribui-las para outras propriedades. Por exemplo, a propriedade `background-color` não aceita o valor `10px`, pois este não define uma cor e sim um comprimento.
+Toda propriedade no CSS possui um valor que definine seu funcionamento. Tal valor, é caracterizado por um tipo de valor, que estão ligados à propriedades específicas, não sendo possível atribui-las para outras propriedades. Por exemplo, a propriedade `background-color` não aceita o valor `10px`, pois este não define uma cor e sim um comprimento.
 
 ## Tipos de dados
-Dentro das especificações, os tipos de dados da CSS são definidos entre colchetes, e.g. `<color>`.
+Dentro das especificações, os tipos de valores CSS são definidos entre colchetes, e.g. `<color>`.
 
 Tipo de valor | Descrição
 --------------|-----------
 `<integer>` | número inteiro, como 512 ou 15.
 `<number>`	| representa um número decimal. Por exemplo,  0.30  -1.2.
 `<dimension>` |	é um `<number>` com uma unidade anexada a ele. Por exemplo,  45deg, 5s, ou 10px. `<dimension>`é uma categoria abrangente que inclui os tipos `<length>`, `<angle>`, `<time>`, e `<resolution>`.
-`<percentage>` |	A `<percentage>`representa uma fração de algum outro valor. Por exemplo  50%,. Os valores percentuais são sempre relativos a outra quantidade. Por exemplo, o comprimento de um elemento é relativo ao comprimento de seu elemento pai.
+`<percentage>` |	A `<percentage>`representa uma fração de algum outro valor. Por exemplo  50%. Os valores percentuais são sempre relativos a outra quantidade. Por exemplo, o comprimento de um elemento é relativo ao comprimento de seu elemento pai.
 
 ### Comprimento
 
 Os valores de comprimentos são os mais usados e são representados por `<length>`.
 
-#### `<length>` absolutos
+#### Valores absolutos
 Valores de comprimentos absolutos não são relativos a nada e sempre representarão as mesmas dimensões.
 
 Unidade	| Nome	| Equivalente a
@@ -31,11 +40,11 @@ Unidade	| Nome	| Equivalente a
 `pt`	|Pontos |	1pt = 1/72 de 1 pol.
 `px`	|Píxeis	|1px = 1/96 de 1 pol.
 
-#### O pixel das CSS o pixel do dispositivo
+#### O pixel CSS o pixel do dispositivo
 
-Existe um diferença entre a **resolução da CSS** a **resolução dos dispositivos**. Enquando a primeira serve para cálculos internos da CSS a segunda representa o atual número de pixels na tela. Lembrando que, resolução é quantidadade de pixels que há em uma linha e uma coluna. Dessa forma, se considerarmos a tela de um celular e a tela de um monitor, chegamos a conclusão que eles terão resoluções diferentes, ou seja, quantidade de pixels diferentes, pois suas dimensões físicas são diferentes. Esse raciocínio poderia fazer sentido caso não existe celulares e monitores com resoluções iguais mesmo que seus tamanhos sejam diferentes. É perfeitamente razoável encontrar celulares com a mesma resolução de um monitor, e esse comportamento denota que para diferentes tipos de telas haverá diferentes quantidades de pixels dispostas em quantidade de espaço iguais entre sí.
+Existe um diferença entre a **resolução do CSS** e a **resolução dos dispositivos**. Enquando a primeira serve para cálculos internos do CSS, a segunda representa o atual número de pixels na tela. Lembrando que, resolução é quantidadade de pixels que há em uma linha e uma coluna (horizontal e vertical). Dessa forma, se considerarmos a tela de um celular e a tela de um monitor, chegamos a conclusão que eles terão resoluções diferentes, ou seja, quantidade de pixels diferentes, pois suas dimensões físicas são diferentes. Esse raciocínio poderia fazer sentido caso não existe celulares e monitores com resoluções iguais mesmo que seus tamanhos sejam diferentes. É perfeitamente razoável encontrar celulares com a mesma resolução de um monitor, e esse comportamento denota que para diferentes tipos de telas haverá diferentes quantidades de pixels dispostas em quantidade de espaço fisícamente iguais entre sí.
 
-Essse comportamento é chamado de *densidade de pixel*, que diz respeito a quantidade de pixel em determinado espaço físico, geralmente uma polegada, que é representado por *ppi* (pixels per inch). Enfim, densidade de pixel ou densidade de tela, é a proporção entre a resolução da tela e a resolução das css. Observe os seguintes exemplos:
+Esse comportamento é chamado de *densidade de pixel*, que diz respeito a quantidade de pixel em determinado espaço físico, geralmente uma polegada, que é representado por *ppi* (pixels per inch). Enfim, densidade de pixel ou densidade de tela, é a proporção entre a resolução da tela e a resolução das css. Observe os seguintes exemplos:
 
 Dispositivo 		| Pixels CSS | Pixels na Tela | Densidade
 --------------------|:-------------:|:--------------:|:--------:
@@ -45,13 +54,13 @@ Samsung Galaxy S10 |1| 4 | 4x
 
 Sendo assim, os dimensões físicas da tela e o *ppi* são inversamente proporcionais: quanto maior a tela, menor será o *ppi*; quanto menor a tela, maior será o *ppi*.
 
-#### `<length>` relativos
+#### Valores relativos
 Valores de comprimentos relativos são relativos à outra coisa, por exemplo ao elemento pai ou às dimensões de tela. Uma das vantagens de se usar tamanhos relativos é tornar as dimensões dos elementos flexíveis, mas se faz necessário um planejamento cauteloso para tal.
 
 Unidade | Relativo a
 --------|----------
-`em`	|Tamanho da fonte do pai, no caso de propriedades tipográficas como `font-size`, e tamanho da fonte do próprio elemento, no caso de outras propriedades como width.
-`ex`	|altura x da fonte do elemento.
+`em`	|Tamanho da fonte do pai, no caso de propriedades tipográficas como `font-size`, e tamanho da fonte do próprio elemento, no caso de outras propriedades como `width`.
+`ex`	|altura do eixo horizontal da fonte do elemento.
 `ch`	|A medida de avanço (largura) do glifo "0" da fonte do elemento.
 `rem`	|Tamanho da fonte do elemento raiz.
 `lh`	|Altura da linha do elemento.
@@ -60,28 +69,28 @@ Unidade | Relativo a
 `vmin`  |1% da dimensão menor da janela de visualização.
 `vmax` 	|1% da dimensão maior da janela de visualização.
 
-### Porcentagens `%` `<percentage>`
+### Porcentagens
 
-Porcentagens são os valores de unidade relativada mais utilizado, simples e flexível. Na sua aplicação, ele considera o elemento ancestral mais próximo (na maioria dos casos o elemento pai), ou valor de propriedade que pode ser calculado e aplicado.
+Porcentagens são os tipos de valores relativos mais utilizado, simples e flexível. Na sua aplicação, ele considera o elemento ancestral mais próximo (na maioria dos casos o elemento pai), ou valor de propriedade que pode ser calculado e aplicado.
 
 ```css
 .parent	{
-	width: 400px;
+  width: 400px;
 }
 .child	{
-	width: 50%;	/*=200px*/
-	padding: 50%; /*100px*/
+  width: 50%;	/*=200px*/
+  adding: 50%; /*100px*/
 }
 ```
 
-A portecentagem pode simular qualquer outro tipo de valor, como `<length>` ou `<dimension>`, pois ela sempre retornará um valor relativo em quantidade e tipo de dado aplicado no elemento ancestral.
+A porcentagem pode simular qualquer outro tipo de valor, como `<length>` ou `<dimension>`, pois ela sempre retornará um valor relativo em quantidade e tipo de valor aplicado no elemento ancestral.
 
 ### Números
 
-Há muitas propriedades que aceitam apenas um número como valor. Um exemplo disso é propriedade `opacity`:
+Há muitas propriedades que aceitam apenas um número como valor. Um exemplo disso é propriedade a `opacity`:
 ```css
 .box {
-	opacity: 0.35;
+  opacity: 0.35;
 }
 ```
 
@@ -89,15 +98,15 @@ Quando trabalhamos com números no CSS estes valores não podem estar dentro de 
 
 ## Cores
 
-Há várias maneiras de se trabalhar com cores no CSS, mas vamos nos ater as formas principais de fazê-lo.O sistema de cores padrão dos computadores são baseados em 24 bits, o que permite apresentar 16,7 milhões de cores diferentes nos canas vermelho, azul e verde com 256 cores diferentes por canal (256 x 256 x 256 = 16.777.216), daí têm-se o nome RGB (Red, Green, Blue).
+Há várias maneiras de se trabalhar com cores no CSS, mas vamos nos ater as formas principais de fazê-lo.O sistema de cores padrão dos computadores são baseados em 24 bits, o que permite apresentar 16,7 milhões de cores diferentes nos canais vermelho, verde e azul com 256 cores diferentes por canal (256 x 256 x 256 = 16.777.216), daí têm-se o nome RGB (Red, Green, Blue).
 
-### Palavras-chave (keyword)
+### Palavras-chave
 
 A primeira maneira de definir uma cor no CSS é através da declaração do nome da cor, como por exemplo:
 
 ```css
 div {
- background-color: blue; /*define um plano de fundo azul*/
+  background-color: blue; /*define um plano de fundo azul*/
 }
 ```
 ### Valores RGB Hexadecimais
@@ -123,13 +132,13 @@ Uma variação chamada *RGBa* permite usar transparência nas cores através do 
 
 ```css
 div {
-	background-color: rgba(2, 121, 139, 0.3);
+  background-color: rgba(2, 121, 139, 0.3);
 }
 ```
 
 ## Imagens
 
-Há um tipo de valor chamado `<image>` que é usado na inserção imagens em determinados contextos através da função `url()`:
+Há um tipo de valor chamado `<image>` que é usado na inserção de imagens em determinados contextos através da função `url()`:
 
 ```css
 .image {
@@ -153,16 +162,16 @@ Neste exemplo, nós definimos uma imagem de plano de fundo, sem repetição, e a
 
 ## Strings e identificadores
 
-Quando se faz uso de tipos `<color>`, por exemplo, usamos palavras-chaves para definir uma cor. Essas, são chamadas de identificadores, e não são `strings`. Haverá momento que se fará necessário o uso de tipos `strings` e outros o uso de identificadores. Considera o exemplo abaixo:
+Quando se faz uso de tipos `<color>`, por exemplo, usamos palavras-chaves para definir uma cor. Essas, são chamadas de identificadores, e não são `strings`. Haverá momento que se fará necessário o uso de tipos `strings` e outros o uso de identificadores. Considere o exemplo abaixo:
 
 ```css
 .box {
-	color: white; /* identificacador */
-	background-color: darkred; /*identificador*/
+  color: white; /* identificacador */
+  background-color: darkred; /*identificador*/
 }
 
 .box::after {
-	content: "Some content here" /*Valor do tipo string*/
+  content: "Some content here" /*Valor do tipo string*/
 }
 ```
 
@@ -170,11 +179,11 @@ Quando se faz uso de tipos `<color>`, por exemplo, usamos palavras-chaves para d
 
 Por definição, as funções realizam tarefas de forma simplificada, e sendo mais técnico, elas retornam valores sem esforço para o programador e o computador.
 
-No CSS existem várias funções para uso, entre eleas está a `calc()` que realizada um cálculo, por exemplo entre medidas de comprimento.
+No CSS existem várias funções para uso, entre elas está a `calc()` que realiza um cálculo, por exemplo entre medidas de comprimento.
 
 ```css
 .box {
-	width: calc(20% + 100px);
+  width: calc(20% + 100px);
 }
 ```
 
@@ -183,4 +192,4 @@ Neste exemplo estamos usando a função `calc()` para definir o `width` de um el
 
 ## Saiba mais
 
-Este documento foi escrito com base no seguinte artigo *[CSS values and units](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units).*
+Este documento foi escrito com base no seguinte documento *[CSS values and units](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units).*
