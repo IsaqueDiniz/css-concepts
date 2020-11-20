@@ -40,9 +40,9 @@ Unidade	| Nome	| Equivalente a
 `pt`	|Pontos |	1pt = 1/72 de 1 pol.
 `px`	|Píxeis	|1px = 1/96 de 1 pol.
 
-#### O pixel CSS o pixel do dispositivo
+#### O pixel CSS e o pixel do dispositivo
 
-Existe um diferença entre a **resolução do CSS** e a **resolução dos dispositivos**. Enquando a primeira serve para cálculos internos do CSS, a segunda representa o atual número de pixels na tela. Lembrando que, resolução é quantidadade de pixels que há em uma linha e uma coluna (horizontal e vertical). Dessa forma, se considerarmos a tela de um celular e a tela de um monitor, chegamos a conclusão que eles terão resoluções diferentes, ou seja, quantidade de pixels diferentes, pois suas dimensões físicas são diferentes. Esse raciocínio poderia fazer sentido caso não existe celulares e monitores com resoluções iguais mesmo que seus tamanhos sejam diferentes. É perfeitamente razoável encontrar celulares com a mesma resolução de um monitor, e esse comportamento denota que para diferentes tipos de telas haverá diferentes quantidades de pixels dispostas em quantidade de espaço fisícamente iguais entre sí.
+Existe um diferença entre a **resolução do CSS** e a **resolução dos dispositivos**. Enquanto a primeira serve para cálculos internos do CSS, a segunda representa o atual número de pixels na tela. Lembrando que, resolução é quantidadade de pixels que há em uma linha e uma coluna (horizontal e vertical). Dessa forma, se considerarmos a tela de um celular e a tela de um monitor, chegamos a conclusão que eles terão resoluções diferentes, ou seja, quantidade de pixels diferentes, pois suas dimensões físicas são diferentes. Esse raciocínio poderia fazer sentido caso não existe celulares e monitores com resoluções iguais mesmo que seus tamanhos sejam diferentes. É perfeitamente razoável encontrar celulares com a mesma resolução de um monitor, e esse comportamento denota que para diferentes tipos de telas haverá diferentes quantidades de pixels dispostas em quantidade de espaço fisícamente iguais entre sí.
 
 Esse comportamento é chamado de *densidade de pixel*, que diz respeito a quantidade de pixel em determinado espaço físico, geralmente uma polegada, que é representado por *ppi* (pixels per inch). Enfim, densidade de pixel ou densidade de tela, é a proporção entre a resolução da tela e a resolução das css. Observe os seguintes exemplos:
 
@@ -192,4 +192,4 @@ Neste exemplo estamos usando a função `calc()` para definir o `width` de um el
 
 ## Saiba mais
 
-Este documento foi escrito com base no seguinte documento *[CSS values and units](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units).*
+Este artigo foi escrito com base no seguinte documento *[CSS values and units](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units).*
